@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1{
+            text-align: center;
+            background-color: aquamarine;
+        }
+        input{
+            width: 25%;
+            padding: 5px;
+            margin: 5px;
+            align-items: center;
+        }
+        textarea{
+            width: 30%;
+            height: 200px;
+            padding: 6px;
+            margin: 5px;
+        }
+        button{
+            margin: 3px;
+        }
+        form{
+            text-align: center;
+        }
+        .center{
+            text-align: center;
+        }
+        div{
+            text-align: center;
+            font-size: 45px;
+        }
+    </style>
+    <title>Regex</title>
+</head>
+<body>
+    <h1>Regex pattern Finding</h1>
+    <form action="\", method="post">
+        <label for="pattern">Insert Regular Expression Pattern Below</label>
+        <br>
+        <input type="text" name="pattern">
+        <br>
+        <label for="text">Please Insert Text Below</label>
+        <br>
+        <textarea name="text"></textarea>
+        <br>
+        <button type="submit">Search</button>
+    </form>
+    <section class="center">
+    <a href="/emailvalidation">Click here to validate Emails</a>
+    </section>
+    <div>
+        <br>
+        <label>Result : </label>
+        {%- if n -%}
+            {%- for j in t -%}
+                {% if j in n -%}
+                    <mark>{{j}}</mark>
+                {%- else -%}
+                    {{j}}
+                {%- endif -%}
+            {%- endfor -%}
+        {% else %}
+            No Match Found
+        {%- endif -%}
+    </div>
+</body>
+</html>

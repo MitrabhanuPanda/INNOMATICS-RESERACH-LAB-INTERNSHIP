@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: aquamarine;
+        }
+        input{
+            width: 25%;
+            padding: 5px;
+            margin: 5px;
+            align-items: center;
+        }
+        textarea{
+            width: 30%;
+            height: 200px;
+            padding: 6px;
+            margin: 5px;
+        }
+        button{
+            margin: 3px;
+        }
+        form,a{
+            text-align: center;
+        }
+        .center{
+            text-align: center;
+        }
+        div{
+            text-align: center;
+            font-size: 45px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Email Validation</h1>
+    <form action="\emailvalidation", method="post">
+        <label for="email">Enter your Email Below</label>
+        <br>
+        <input type="text" name="email">
+        <br>
+        <button type="submit">Check</button>
+    </form>
+    <section class="center">
+    <a href="/">Click here to go Back</a>
+    </section>
+    <div>
+        {{r}}
+    </div>
+</body>
+</html>
